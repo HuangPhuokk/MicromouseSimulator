@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(MicromouseSimulator
-    VERSION 0.1.0
+    VERSION 1.0.0
     DESCRIPTION "Micromouse 2D Simulation Project"
     LANGUAGES CXX
 )
@@ -13,6 +13,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(MicromouseSimulator
     src/main.cpp
     src/app/Application.cpp
+    src/maze/Maze.cpp
+    src/robot/Robot.cpp
+    src/sensor/WallSensor.cpp
+    src/solver/PathSolver.cpp
+    src/simulation/Simulator.cpp
+    src/ui/ConsoleRenderer.cpp
+    src/stats/Statistics.cpp
 )
 
 target_include_directories(MicromouseSimulator
